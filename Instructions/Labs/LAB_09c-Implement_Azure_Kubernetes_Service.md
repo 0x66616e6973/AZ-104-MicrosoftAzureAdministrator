@@ -195,7 +195,7 @@ In this task, you will scale horizontally the number of pods and then number of 
     az aks scale --resource-group $RESOURCE_GROUP --name $AKS_CLUSTER --node-count 2
     ```
 
-    > **Note**: Wait for the provisioning of the additional node to complete. This might take about 3 minutes. If it fails, rerun the `az aks scale` command.
+    > **Note**: Wait for the provisioning of the additional node to complete. This might take about 3 minutes. If it fails, rerun the `az aks scale` command. If you get "Cannot scale cluster autoscaler enabled node pool." error message, go on the **az104-9c-aks1 - Node pools** blade, choose agentpool and click on **Scale node pool**. Set **Scale Method** from Autoscale to manual and rerun the `az aks scale`.
 
 1. From the **Cloud Shell** pane, run the following to verify the outcome of scaling the cluster:
 
